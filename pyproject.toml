@@ -1,0 +1,41 @@
+[project]
+name = "hr-rag-experiments"
+version = "0.1.0"
+description = "HR Policy RAG — 9 retrieval experiments with MLflow + LangSmith tracking"
+requires-python = ">=3.10"
+
+dependencies = [
+    # langchain core + integrations (v0.3+ APIs, no deprecated chains)
+    "langchain>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langchain-huggingface>=0.1.0",
+    "langchain-text-splitters>=0.3.0",
+    # vector store
+    "faiss-cpu>=1.8.0",
+    # embeddings + reranking
+    "sentence-transformers>=3.0.0",
+    "flashrank>=0.2.0",
+    # sparse retrieval (BM25 — used by EnsembleRetriever)
+    "rank-bm25>=0.2.2",
+    # llm provider
+    "openai>=1.40.0",
+    # evaluation
+    "ragas>=0.1.0",
+    "datasets>=2.20.0",
+    # experiment tracking
+    "mlflow>=2.14.0",
+    # tracing
+    "langsmith>=0.1.0",
+    # utils
+    "python-dotenv>=1.0.0",
+    "pandas>=2.0.0",
+    "notebook>=7.0.0",
+    "langchain-groq>=1.1.2",
+    "dagshub>=0.6.9",
+]
+
+[tool.uv]
+# use this to pin to a specific index if needed
+# index-url = "https://pypi.org/simple"
